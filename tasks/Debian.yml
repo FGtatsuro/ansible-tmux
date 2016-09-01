@@ -1,2 +1,9 @@
 ---
 # tasks file for tmux(On Debian family)
+- name: Install tmux with APT
+  apt:
+    name: 'tmux'
+    update_cache: yes
+    cache_valid_time: '3600'
+    install_recommends: no
+  become: yes
