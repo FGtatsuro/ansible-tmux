@@ -1,0 +1,8 @@
+---
+# tasks file for tmux(On RedHat family)
+# ATTENTION: RedHat families are NOT supported officially. There is no test about these tasks.
+- name: Install tmux with Yum
+  yum:
+    name: 'tmux'
+    update_cache: yes
+  become: yes
