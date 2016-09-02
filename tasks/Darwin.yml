@@ -1,2 +1,6 @@
 ---
 # tasks file for tmux(On OSX)
+- name: Install tmux with Homebrew
+  homebrew:
+    name: 'tmux'
+    update_homebrew: yes

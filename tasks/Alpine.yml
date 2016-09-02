@@ -1,2 +1,7 @@
 ---
 # tasks file for tmux(On Alpine Linux)
+- name: Install tmux with APK
+  apk:
+    name: 'tmux'
+    update_cache: yes
+  become: yes
