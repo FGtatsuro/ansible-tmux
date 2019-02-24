@@ -1,4 +1,5 @@
 galaxy_info:
+  role_name: tmux
   author: FGtatsuro
   description: Ansible role for tmux
   license: MIT
@@ -8,14 +9,13 @@ galaxy_info:
     - name: Debian
       versions:
         - jessie
-    - name: Darwin
+    - name: MacOSX
       versions:
         - all
 
   galaxy_tags:
     - development
     - osx
-    - alpine
 
 # dependencies: []
 dependencies:
