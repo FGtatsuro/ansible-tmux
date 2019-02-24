@@ -10,12 +10,8 @@ matrix:
       language: generic
       install:
         # Workaround for OSX.
-        - brew install libffi libyaml openssl
-        - brew link openssl --force
-        - sudo pip install -U setuptools
         - sudo pip install ansible
-        - ansible-galaxy install FGtatsuro.python-requirements
-        - bundle install
+        - git clone https://github.com/FGtatsuro/ansible-python-requirements.git roles/FGtatsuro.python-requirements
       env:
         - TARGET=localhost
         # Workaround for OSX.
@@ -61,8 +57,7 @@ sudo: required
 
 install:
   - pip install ansible
-  # Resolve dependencies(When target role isn't installed via Ansible Galaxy, auto resolution of dependencies doesn't occur.)
-  - ansible-galaxy install FGtatsuro.python-requirements
+  - git clone https://github.com/FGtatsuro/ansible-python-requirements.git roles/FGtatsuro.python-requirements
   - bundle install
 
 script:
